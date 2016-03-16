@@ -27,3 +27,70 @@ var counter = 0,
 		{"name":"All Our Yesterdays","answer":"trek"},
 		{"name":"Is There No Truth In Beauty?","answer":"trek"}
 	];
+
+var $name = $('.name'),
+	$generate = $('.generate'),
+	$result = $('.results'),
+	$score = $('.score'),
+	$thanks = $('.thanks'),
+	$options = $('.options');
+
+var trekApp = {};
+
+trekApp.init = function() {
+	if (counter < content.length) {
+		var selection = content[counter];
+		$name.html(selection["name"]);
+		type = selection["answer"];
+
+		$result.hide();
+		$score.hide();
+		$name.show();
+		$options.show();
+	} else {
+		$thanks.show().append(" <a href='http://twitter.com/home?status=Take the Star Trek Episode vs. Nail Polish Colour quiz! I scored " + score + " out of " + counter + " http://kerrywall.com/trek-polish' target='_blank'>Tweet your score</a>.");
+	}
+	$generate.hide();
+}
+
+$('.choice').click(function(e) {
+	var chosenAnswer = e.target.id;
+	$result.show();
+	$score.show();
+	$name.hide();
+	$options.hide();
+
+	if (type == 'trek') {
+		fullAnswer = "Star Trek episode";
+	} else {
+		fullAnswer = "nail polish shade";
+	}
+
+	if (chosenAnswer == type) {
+		$result.html("<span class='right'>Affirmative, Captain!</span> It's a " + fullAnswer + ".");
+		score ++;
+	} else {
+		$result.html("<span class='wrong'>Damnit, Jim!</span> It's a " + fullAnswer + ".");
+	}
+	counter ++;
+	$score.html("You're " + score + "for " + counter + ".");
+	$generate.show();
+
+});
+
+$(document).ready(function(){
+	trekApp.init();
+});
+
+$generate.on('click', function(){
+	trekApp.generate();
+});
+
+
+
+
+
+
+
+
+
