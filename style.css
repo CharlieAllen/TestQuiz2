@@ -104,9 +104,6 @@ header a.engage {
 	color: #000;
 }
 
-.main p {
-}
-
 .main p.name {
 	color: #d35400;
 	text-shadow: 1px 1px #fff;
@@ -115,9 +112,70 @@ header a.engage {
 	margin: 40px 0;
 }
 
-.main p.result {
+.main p.results {
 	color: #111;
 	font-size: 48px;
+}
+
+.main p.results span.wrong {
+	color: #c0392b;
+	display: block;
+}
+
+.main p.results span.right {
+	color: #27ae60;
+	display: block;
+}
+
+.main .choice, .main .generate {
+	display: inline;
+	padding: 10px;
+	border: 3px solid #f39c12;
+	color: #f39c12;
+	border-radius: 15px;
+	font-size: 20px;
+	text-transform: uppercase;
+	background: #fff;
+	cursor: pointer;
+}
+
+.main .choice {
+	margin: 40px;
+}
+
+.main .results {
+	margin-bottom: 40px;
+}
+
+footer {
+	background: #2c3e50;
+	padding: 10px 10px 20px 20px;
+	text-align: left;
+	color: white;
+	font-family: 'Roboto-slab', serif;	
+}
+
+footer p {
+	font-size: 14px;
+}
+
+footer .left {
+	float: left;
+	width: 40%;
+	text-align: justify;
+	margin-right: 10%;
+}
+
+footer .right {
+	float: left;
+	width: 50%;
+}
+
+@media (max-width: 425px) {
+	.main .choice, .main .generate {
+		display: block;
+		margin: 5px 0;
+	}
 }
 
 
