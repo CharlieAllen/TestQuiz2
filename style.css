@@ -59,12 +59,66 @@ header h1 span.or {
 
 header p{
 	font-family: 'Roboto-slab', serif;
-	text-align: ;
+	text-align: justify;
+	text-shadow: 2px 2px 0 #000;
 }
 
+header p.disclaimer {
+	font-size: 14px;
+}
 
+header a, footer a {
+	color: white;
+}
 
+header a:hover, footer a:hover {
+	text-decoration: none;
+}
 
+header a.engage {
+	clear: both;
+	padding: 10px;
+	color: #c0392b;
+	border: 3px solid #c0392b;
+	background: white;
+	border-radius: 15px;
+	margin-top: 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	width: 20%;
+}
+
+.main {
+	width: 70%;
+	margin: 0 auto;
+	font-weight: 300;
+	font-size: 24px;
+	text-align: center;
+	font-family: 'Roboto-slab', serif;
+	padding: 50px 0;
+	min-height: 400px;	
+}
+
+.main a {
+	color: #000;
+}
+
+.main p {
+}
+
+.main p.name {
+	color: #d35400;
+	text-shadow: 1px 1px #fff;
+	font-size: 48px;
+	padding: 20px;
+	margin: 40px 0;
+}
+
+.main p.result {
+	color: #111;
+	font-size: 48px;
+}
 
 
 
