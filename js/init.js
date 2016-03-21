@@ -35,6 +35,8 @@ var $name = $('.name'),
     $thanks = $('.thanks'),
     $options = $('.options');
 
+  $('.result').addClass('rubberBand');
+
 var trekApp = {};
 
 trekApp.init = function() {
