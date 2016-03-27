@@ -25,7 +25,7 @@ var content = [
 	{"name":"The Apple","answer":"trek"},
 	{"name":"Thunder Road","answer":"polish"},
 	{"name":"All Our Yesterdays","answer":"trek"},
-	{"name":"Is There No Truth In Beauty?","answer":"trek"}
+	{"name":"Is There In Truth No Beauty?","answer":"trek"}
 	];
 
 var $name = $('.name'),
